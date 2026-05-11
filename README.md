@@ -274,9 +274,3 @@ https://www.linkedin.com/in/ashutoshm04/
 https://github.com/ashutoshm2004
 
 ---
-
-## ⭐ Support
-
-If you liked this project, consider giving it a **star ⭐ on GitHub**.
-
-It helps a lot!
