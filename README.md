@@ -1,1 +1,282 @@
-{"name":"nlqg_project_readme","type":"document","content":"# 🚀 NLQG — Natural Language Query Generator\n\n<div align="center">\n\n### Convert Natural Language into SQL Queries Instantly\n\nAsk questions in plain English and get **automatically generated SQL queries + query results** from uploaded datasets.\n\n🌐 **Live Demo:** [https://nl2sqlg.netlify.app/\n\n[![LinkedIn](https://nl2sqlg.netlify.app/\n\n[![LinkedIn)]([https://img.shields.io/badge/LinkedIn-Ashutosh%20Mishra-blue?style=for-the-badge&logo=linkedin](https://img.shields.io/badge/LinkedIn-Ashutosh%20Mishra-blue?style=for-the-badge&logo=linkedin))]([https://www.linkedin.com/in/ashutoshm04/)\n[![GitHub](https://www.linkedin.com/in/ashutoshm04/%29\n[![GitHub)]([https://img.shields.io/badge/GitHub-ashutoshm2004-black?style=for-the-badge&logo=github](https://img.shields.io/badge/GitHub-ashutoshm2004-black?style=for-the-badge&logo=github))]([https://github.com/ashutoshm2004)\n\n](https://github.com/ashutoshm2004%29\n\n)</div>\n\n---\n\n# 📌 About the Project\n\n**NLQG (Natural Language Query Generator)** is a **Generative AI-powered data querying platform** that enables users to interact with datasets using **plain English instead of SQL**.\n\nUsers can upload datasets in **CSV, XLS, and XLSX formats**, ask natural language questions, and receive:\n\n✅ AI-generated SQL queries  \n✅ Query execution results  \n✅ Downloadable CSV / Excel outputs  \n✅ Smart handling of joins, nested queries, and filtering conditions  \n✅ Responsive modern UI with dark mode support\n\nThe project uses **Groq LLMs** to translate natural language into optimized SQL queries and executes them dynamically on an SQLite database.\n\n---\n\n# ✨ Features\n\n### 📂 Dataset Upload\n- Upload **CSV, XLS, XLSX** files\n- Automatic schema extraction\n- Dynamic SQLite table creation\n\n### 🤖 Natural Language → SQL\n- Converts plain English into executable SQL\n- Handles:\n  - Filtering conditions\n  - Aggregations\n  - Nested queries\n  - Compound conditions\n  - Date-based queries\n  - Grouping & ordering\n\n### 📊 Query Results\n- Interactive result tables\n- Search within query outputs\n- Smart formatting for long values\n- Handles missing values safely (`NaN`, `NULL`)\n\n### 📥 Export Results\n- Download results as:\n  - CSV\n  - Excel (.xlsx)\n\n### 🎨 Modern UI\n- Responsive dashboard\n- Dark / Light mode\n- SQL copy button\n- Smooth user experience\n\n---\n\n# 🏗️ System Architecture\n\n`mermaid\nflowchart TD\n\nA[User Uploads Dataset] --> B[Frontend - React + Tailwind]\nB --> C[FastAPI Backend]\n\nC --> D[File Parser]\nD --> E[CSV / XLS / XLSX Processing]\nE --> F[SQLite Database]\n\nB --> G[User Natural Language Query]\nG --> H[Groq LLM]\nH --> I[SQL Query Generation]\nI --> J[SQL Execution Engine]\nJ --> F\n\nF --> K[Query Results]\nK --> L[Frontend Dashboard]\n\nL --> M[Download CSV / Excel]\n`\n\n---\n\n# ⚙️ Tech Stack\n\n## Frontend\n- React.js\n- Tailwind CSS\n- Axios\n- Vite\n\n## Backend\n- FastAPI\n- Python\n- SQLite\n- Pandas\n- OpenPyXL\n- XLRD\n\n## AI / LLM\n- Groq API\n- LLaMA Models\n\n## Deployment\n- Frontend: Netlify\n- Backend: Render\n\n---\n\n# 📁 Project Structure\n\n`bash\nNLQG-PROJECT/\n│── frontend/\n│   ├── src/\n│   ├── components/\n│   ├── services/\n│   └── App.jsx\n│\n│── backend/\n│   ├── utils/\n│   │   ├── db_manager.py\n│   │   ├── downloader.py\n│   │   ├── file_parser.py\n│   │   ├── sql_generator.py\n│   │   └── visualizer.py\n│   │\n│   ├── database/\n│   ├── app.py\n│   └── requirements.txt\n│\n└── README.md\n`\n\n---\n\n# 🚀 How It Works\n\n### Step 1 — Upload Dataset\nUpload a dataset in:\n- `.csv`\n- `.xls`\n- `.xlsx`\n\n### Step 2 — Ask Questions in English\nExamples:\n\n`sql\nShow all movies released after 2020\n`\n\n`sql\nFind the average rating of TV shows\n`\n\n`sql\nShow top 10 directors with most movies\n`\n\n### Step 3 — AI Generates SQL\nExample generated SQL:\n\n`sql\nSELECT *\nFROM uploaded_table\nWHERE release_year > 2020;\n`\n\n### Step 4 — Get Results Instantly\nView structured query results directly inside the dashboard.\n\n---\n\n# 📸 Screenshots\n\n> Add screenshots of your UI here for better portfolio impact.\n\nExample:\n\n`md\n![Dashboard Screenshot](./screenshots/dashboard.png)\n`\n\n---\n\n# 🌐 Live Demo\n\n🔗 **Try the Project Here:**  \nhttps://nl2sqlg.netlify.app/\n\n---\n\n# 🛠️ Installation\n\n## Clone Repository\n\n`bash\ngit clone https://github.com/ashutoshm2004/NLQG-PROJECT.git\ncd NLQG-PROJECT\n`\n\n## Backend Setup\n\n`bash\ncd backend\npip install -r requirements.txt\nuvicorn app:app --reload\n`\n\n## Frontend Setup\n\n`bash\ncd frontend\nnpm install\nnpm run dev\n`\n\n---\n\n# 🔮 Future Enhancements\n\n- 📊 Automatic graph generation\n- 🧠 Better SQL optimization using RAG\n- 🔒 User authentication\n- ☁️ Private dataset storage\n- 📈 Dashboard analytics\n- 🗂️ Multi-table joins across uploaded files\n\n---\n\n# 👨‍💻 Author\n\n## Ashutosh Kshitij Mishra\n\n🔗 LinkedIn  \nhttps://[www.linkedin.com/in/ashutoshm04/\n\n💻](http://www.linkedin.com/in/ashutoshm04/\n\n💻) GitHub  \nhttps://github.com/ashutoshm2004\n\n---\n\n# ⭐ Support\n\nIf you liked this project, consider giving it a **star ⭐ on GitHub**!"}
+# 🚀 NLQG — Natural Language Query Generator
+
+### Convert Natural Language into SQL Queries Instantly
+
+Ask questions in plain English and get automatically generated SQL queries from uploaded datasets — no SQL knowledge required.
+
+🌐 **Live Demo:** https://nl2sqlg.netlify.app/  
+💼 **LinkedIn:** https://www.linkedin.com/in/ashutoshm04/  
+🐙 **GitHub:** https://github.com/ashutoshm2004  
+
+---
+
+## 📌 About the Project
+
+**NLQG (Natural Language Query Generator)** is a **Generative AI-powered SQL query platform** that enables users to interact with structured datasets using **natural language instead of SQL**.
+
+Users can upload datasets in **CSV, XLS, and XLSX** formats and ask questions in plain English. The system automatically generates SQL queries, executes them dynamically on a SQLite database, and returns query results instantly.
+
+### ✅ Key Highlights
+
+- Convert plain English questions into SQL queries
+- Upload CSV, XLS, XLSX datasets
+- Dynamic SQLite database creation
+- AI-generated SQL using **Groq LLM**
+- Supports:
+  - Filtering conditions
+  - Nested queries
+  - Compound conditions
+  - Aggregations
+  - Sorting & Grouping
+  - Date-based queries
+- Download query results as **CSV** or **Excel**
+- Search functionality inside query results
+- SQL Copy Button
+- Dark / Light mode UI
+- Responsive and modern interface
+
+---
+
+## ✨ Features
+
+### 📂 Dataset Upload
+- Upload datasets in:
+  - CSV
+  - XLS
+  - XLSX
+- Automatic schema detection
+- Dynamic database creation
+
+### 🤖 Natural Language → SQL
+Convert human language into executable SQL queries.
+
+Examples:
+
+**Input:**
+```text
+Show all movies released after 2018
+```
+
+**Generated SQL:**
+```sql
+SELECT * FROM uploaded_table
+WHERE release_year > 2018;
+```
+
+Supports:
+
+- WHERE conditions
+- LIKE queries
+- Aggregations (`AVG`, `COUNT`, `SUM`)
+- GROUP BY
+- ORDER BY
+- Nested Queries
+- Compound Conditions
+- Date Queries
+- Dynamic filtering
+
+---
+
+### 📊 Query Results Dashboard
+
+- Interactive result tables
+- Search inside results
+- Handles missing values safely
+- Scrollable large datasets
+- Responsive UI
+
+---
+
+### 📥 Export Results
+
+Download results in:
+
+- CSV format
+- Excel (.xlsx) format
+
+---
+
+### 📋 SQL Copy Feature
+
+Copy generated SQL instantly using a one-click copy button.
+
+---
+
+## 🏗️ System Architecture
+
+```mermaid
+flowchart TD
+
+A[User Uploads Dataset] --> B[Frontend - React + Tailwind]
+
+B --> C[FastAPI Backend]
+
+C --> D[File Parser]
+D --> E[CSV / XLS / XLSX Processing]
+
+E --> F[SQLite Database]
+
+B --> G[User Natural Language Query]
+
+G --> H[Groq LLM]
+
+H --> I[SQL Query Generation]
+
+I --> J[SQL Execution Engine]
+
+J --> F
+
+J --> K[Query Results]
+
+K --> L[Frontend Dashboard]
+
+L --> M[Download CSV / Excel]
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Tailwind CSS
+- Axios
+- Vite
+
+### Backend
+- FastAPI
+- Python
+- SQLite
+- Pandas
+- Uvicorn
+
+### AI / LLM
+- Groq API
+- LLaMA Models
+
+### Deployment
+- Frontend → Netlify
+- Backend → Render
+
+---
+
+## 📂 Project Structure
+
+```bash
+NLQG-PROJECT/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── services/
+│   │   └── App.jsx
+│   │
+│   ├── package.json
+│   └── vite.config.js
+│
+├── backend/
+│   ├── utils/
+│   │   ├── db_manager.py
+│   │   ├── downloader.py
+│   │   ├── file_parser.py
+│   │   ├── sql_generator.py
+│   │   └── visualizer.py
+│   │
+│   ├── app.py
+│   ├── requirements.txt
+│   └── .env
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Installation Guide
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/ashutoshm2004/NLQG-PROJECT.git
+cd NLQG-PROJECT
+```
+
+---
+
+### 2️⃣ Backend Setup
+
+```bash
+cd backend
+pip install -r requirements.txt
+```
+
+Create a `.env` file:
+
+```env
+GROQ_API_KEY=your_api_key_here
+```
+
+Run backend:
+
+```bash
+uvicorn app:app --reload
+```
+
+---
+
+### 3️⃣ Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🌍 Deployment
+
+### Frontend (Netlify)
+Deployed on:
+
+🔗 https://nl2sqlg.netlify.app/
+
+### Backend (Render)
+Hosted using FastAPI + Render.
+
+---
+
+## 🔐 Security
+
+Sensitive API keys are securely stored using `.env` files and excluded from version control using `.gitignore`.
+
+---
+
+## 🎯 Future Improvements
+
+- Data visualization charts
+- Multi-table joins
+- Better prompt engineering
+- Query history
+- User authentication
+- Smart schema understanding
+- Better SQL validation
+
+---
+
+## 👨‍💻 Author
+
+### Ashutosh Kshitij Mishra
+
+💼 LinkedIn:  
+https://www.linkedin.com/in/ashutoshm04/
+
+🐙 GitHub:  
+https://github.com/ashutoshm2004
+
+---
+
+## ⭐ Support
+
+If you liked this project, consider giving it a **star ⭐ on GitHub**.
+
+It helps a lot!
