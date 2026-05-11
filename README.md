@@ -265,12 +265,6 @@ Sensitive API keys are securely stored using `.env` files and excluded from vers
 
 ## 👨‍💻 Author
 
-### Ashutosh Kshitij Mishra
-
-💼 LinkedIn:  
-https://www.linkedin.com/in/ashutoshm04/
-
-🐙 GitHub:  
-https://github.com/ashutoshm2004
+### Ashutosh Kshitij Mishra | [💼 LinkedIn](https://www.linkedin.com/in/ashutoshm04/) | [🐙 GitHub](https://github.com/ashutoshm2004)
 
 ---
