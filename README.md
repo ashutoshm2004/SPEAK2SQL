@@ -4,7 +4,7 @@
 
 Ask questions in plain English and get automatically generated SQL queries from uploaded datasets — no SQL knowledge required.
 
-[🌐 **Live Demo:**](https://nl2sqlg.netlify.app/)  
+🌐 **Live Demo:** https://nl2sqlg.netlify.app/ 
 
 ---
 
